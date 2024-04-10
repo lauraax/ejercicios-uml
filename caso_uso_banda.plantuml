@@ -1,0 +1,19 @@
+@startuml
+skinparam actorStyle awesome
+package "Banda aleatoria"{
+    usecase "Armar banda"
+    usecase "Afinar banda"
+    usecase "Tocar banda"
+    usecase "Tocar instrumento"
+    usecase "Afinar instrumento"
+    usecase "Generar instrumento"
+}
+
+usuario -- "Afinar banda"
+usuario -- "Tocar banda"
+"Tocar banda"..> "Tocar instrumento" : include
+"Afinar banda"..> "Afinar instrumento" : include
+"Armar banda"..> "Generar instrumento" : include
+
+
+@enduml

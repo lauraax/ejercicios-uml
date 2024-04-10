@@ -1,0 +1,18 @@
+@startuml
+skinparam actorStyle awesome
+
+package System {
+    usecase "Admin the application"
+    usecase "Admin roles"
+    usecase "Use the application"
+    usecase "Case 2"
+    usecase "login"
+}
+User --|> Admin
+User --|> "General User"
+"General User" -- "Use the application"
+Admin --> "Admin the application"
+Admin --> "Admin roles"
+"Admin roles" --|> "login"
+"Use the application"..|>"Case 2"
+@enduml
