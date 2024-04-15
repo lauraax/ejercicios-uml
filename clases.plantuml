@@ -1,0 +1,22 @@
+@startuml
+Class01 <|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08 
+Class09 -- Class10
+interface Class11
+Class11 <|.. Class12
+abstract class Class12
+Class12 <|-- Class13
+
+Class01 : + operacion01()
+Class01 : ~ operacion01.1()
+Class01 : {static} operacion_de_clase()
+
+Class01 : attr01 
+
+Class03 : # Class04[] parte01
+
+Class12 : {abstract} metodo01()
+Class12 : metodo02()
+@enduml
